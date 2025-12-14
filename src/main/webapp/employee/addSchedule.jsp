@@ -14,7 +14,7 @@
 
 <h2>Add New Train Schedule</h2>
 
-<form action="addScheduleAction.jsp" method="post">
+<form action="${pageContext.request.contextPath}/employee/add-schedule" method="post">
     <label for="train_id">Select Train (Line):</label>
     <select name="train_id" required>
         <option value="">-- Choose a train --</option>

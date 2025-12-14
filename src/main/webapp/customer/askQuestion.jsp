@@ -4,7 +4,7 @@
 <head><meta charset="UTF-8"><title>Ask Customer Service</title></head>
 <body>
   <h2>Submit a Question</h2>
-  <form action="askQuestionAction.jsp" method="post">
+  <form action="${pageContext.request.contextPath}/customer/ask-question" method="post">
     <textarea name="content" rows="5" cols="50"
               placeholder="How can we help you?" required></textarea><br><br>
     <button type="submit">Send Question</button>

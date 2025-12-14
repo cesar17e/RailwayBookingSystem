@@ -1,66 +1,66 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="com.group8.util.DBUtil" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
+
 <%
+    String role = (String) session.getAttribute("role");
+    if (!"rep".equals(role)) {
+        response.sendRedirect(request.getContextPath() + "/auth/employeeLogin.jsp");
+        return;
+    }
+
     String scheduleIdStr = request.getParameter("id");
     if (scheduleIdStr == null || scheduleIdStr.isEmpty()) {
-%>
-    <p>No schedule ID provided.</p>
-    <a href="manageSchedules.jsp">Back</a>
-<%
+        out.println("<p>No schedule ID provided.</p>");
         return;
     }
 
     int scheduleId = Integer.parseInt(scheduleIdStr);
 
-    try (
-        Connection con = DBUtil.getConnection();
-        PreparedStatement ps = con.prepareStatement(
-            "SELECT s.departure_datetime, s.arrival_datetime, s.train_id, tl.transit_line_name " +
-            "FROM TrainSchedule s " +
-            "JOIN Train t ON s.train_id = t.train_id " +
-            "JOIN TransitLine tl ON t.transit_line_id = tl.transit_line_id " +
-            "WHERE s.schedule_id = ?")
-    ) {
+    String departure = "";
+    String arrival = "";
+    String lineName = "";
+
+    String sql =
+        "SELECT s.departure_datetime, s.arrival_datetime, tl.transit_line_name " +
+        "FROM TrainSchedule s " +
+        "JOIN Train t ON s.train_id = t.train_id " +
+        "JOIN TransitLine tl ON t.transit_line_id = tl.transit_line_id " +
+        "WHERE s.schedule_id = ?";
+
+    try (Connection con = DBUtil.getConnection();
+         PreparedStatement ps = con.prepareStatement(sql)) {
+
         ps.setInt(1, scheduleId);
         try (ResultSet rs = ps.executeQuery()) {
             if (!rs.next()) {
-%>
-    <p>Schedule not found.</p>
-    <a href="manageSchedules.jsp">Back</a>
-<%
+                out.println("<p>Schedule not found.</p>");
                 return;
             }
-
-            String departure = rs.getString("departure_datetime").replace(" ", "T");
-            String arrival = rs.getString("arrival_datetime").replace(" ", "T");
-            int trainId = rs.getInt("train_id");
+            departure = rs.getString("departure_datetime").replace(" ", "T");
+            arrival   = rs.getString("arrival_datetime").replace(" ", "T");
+            lineName  = rs.getString("transit_line_name");
+        }
+    }
 %>
 
 <h2>Edit Train Schedule</h2>
 
-<form action="editScheduleAction.jsp" method="post">
+<p><strong>Transit Line:</strong> <%= lineName %></p>
+
+<form method="post"
+      action="<%= request.getContextPath() %>/employee/edit-schedule">
+
     <input type="hidden" name="schedule_id" value="<%= scheduleId %>" />
 
-    <p>Train ID: <%= trainId %> (Line: <%= rs.getString("transit_line_name") %>)</p>
+    <label>Departure:</label><br>
+    <input type="datetime-local" name="departure_datetime"
+           value="<%= departure %>" required><br><br>
 
-    <label for="departure_datetime">Departure Date & Time:</label>
-    <input type="datetime-local" name="departure_datetime" value="<%= departure %>" required />
-    <br><br>
+    <label>Arrival:</label><br>
+    <input type="datetime-local" name="arrival_datetime"
+           value="<%= arrival %>" required><br><br>
 
-    <label for="arrival_datetime">Arrival Date & Time:</label>
-    <input type="datetime-local" name="arrival_datetime" value="<%= arrival %>" required />
-    <br><br>
-
-    <input type="submit" value="Update Schedule" />
+    <button type="submit">Update Schedule</button>
     <a href="manageSchedules.jsp">Cancel</a>
 </form>
-
-<%
-        }
-    } catch (SQLException e) {
-%>
-    <p>Error: <%= e.getMessage() %></p>
-    <a href="manageSchedules.jsp">Back</a>
-<%
-    }
-%>

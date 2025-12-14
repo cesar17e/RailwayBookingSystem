@@ -3,7 +3,7 @@
     // Check if rep is logged in
     String role = (String) session.getAttribute("role");
     if (!"rep".equals(role)) {
-        response.sendRedirect("employeeLogin.jsp");
+        response.sendRedirect(request.getContextPath() + "/auth/employeeLogin.jsp");
         return;
     }
 

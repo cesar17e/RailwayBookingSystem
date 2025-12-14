@@ -6,7 +6,7 @@
   String repSSN = (String) session.getAttribute("userSSN");
 
   if (!"rep".equals(role) || repSSN == null) {
-    response.sendRedirect("employeeLogin.jsp");
+    response.sendRedirect(request.getContextPath() + "/auth/employeeLogin.jsp");
     return;
   }
 

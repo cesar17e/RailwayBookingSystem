@@ -40,8 +40,8 @@
   <p><strong>Line:</strong> <%=lineName%></p>
   <p><strong>Depart:</strong> <%=dep%><br/>
      <strong>Arrive:</strong> <%=arr%></p>
-  <form action="reserveAction.jsp" method="post">
-    <!-- Hidden data -->
+    <form action="${pageContext.request.contextPath}/customer/reserve" method="post">
+      <!-- Hidden data -->
     <input type="hidden" name="schedule_id" value="<%=schedId%>"/>
     <input type="hidden" name="base_fare"    value="<%=baseFare%>"/>
     <input type="hidden" name="origin_id"    value="<%=originId%>"/>

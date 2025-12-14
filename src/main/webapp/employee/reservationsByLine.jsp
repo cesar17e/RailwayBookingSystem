@@ -12,7 +12,7 @@
   // Ensure only admin can access this page
   String role = (String) session.getAttribute("role");
   if (role == null || !"admin".equals(role)) {
-    response.sendRedirect("employeeLogin.jsp");
+    response.sendRedirect(reauest.getContextPath() + "/auth/employeeLogin.jsp");
     return;
   }
 %>
