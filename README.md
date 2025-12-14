@@ -77,11 +77,11 @@ Creates all tables:
 - Message  
 - handles_reservation
 
-## Entity–Relationship Diagram
+## Entity–Relationship Diagrams
 
-The full database schema and table relationships are shown below:
+### Team-Designed ERD
+![Team ERD](../src/main/webapp/images/team-erd.png)
 
-/database/team-erd.png      --> Our hand-designed/team-designed ERD
-/database/mysql-erd.png     --> MYSQL ERD
-
+### MySQL-Generated ERD
+![MySQL ERD](../src/main/webapp/images/mysql-erd.png)
 
