@@ -17,7 +17,7 @@
     <li><a href="myReservations.jsp">View or Cancel Reservations</a></li>
     <li><a href="askQuestion.jsp">Ask Customer Service</a></li>
     <li><a href="customerInbox.jsp">View Messages</a></li>
-    <li><a href="logout.jsp">Log out</a></li>
+    <a href="${pageContext.request.contextPath}/auth/logout">Logout</a>
   </ul>
 </body>
 </html>

@@ -7,7 +7,7 @@
 </head>
 <body>
   <h2>Employee Login</h2>
-  <form action="employeeLoginAction.jsp" method="post">
+  <form action="${pageContext.request.contextPath}/auth/employee-login" method="post">
     <label for="username">Username</label><br>
     <input id="username" type="text" name="username" required><br><br>
 

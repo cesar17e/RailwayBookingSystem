@@ -7,7 +7,7 @@
 </head>
 <body>
   <h2>Log In</h2>
-  <form action="loginAction.jsp" method="post">
+  <form action="${pageContext.request.contextPath}/auth/login" method="post">
     <label for="username">Username</label><br>
     <input id="username" type="text" name="username" required><br><br>
 
@@ -17,7 +17,7 @@
     <button type="submit">Log In</button>
   </form>
 
-  <p>Don’t have an account? <a href="register.jsp">Sign up here</a></p>
+  <p>Don't have an account? <a href="register.jsp">Sign up here</a></p>
   <p><a href="employeeLogin.jsp">Employee / Manager Login</a></p>
 </body>
 </html>

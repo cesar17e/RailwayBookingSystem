@@ -67,7 +67,8 @@
 
 <div class="card">
     <h3>Logout</h3>
-    <a class="button" href="logout.jsp">Log Out</a>
+    <a class="button" href="${pageContext.request.contextPath}/auth/logout">Logout</a>
+
 </div>
 
 </body>

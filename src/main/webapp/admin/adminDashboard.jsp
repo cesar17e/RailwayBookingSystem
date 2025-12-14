@@ -25,6 +25,6 @@
     <li><a href="bestCustomer.jsp">Best Customer</a></li>
     <li><a href="topTransitLines.jsp">Top 5 Transit Lines</a></li>
   </ul>
-  <p><a href="logout.jsp"">Logout</a></p>
+  <a href="${pageContext.request.contextPath}/auth/logout">Logout</a>
 </body>
 </html>

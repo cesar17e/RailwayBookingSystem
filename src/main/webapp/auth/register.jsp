@@ -7,7 +7,7 @@
 </head>
 <body>
   <h2>Create Your Account</h2>
-  <form action="registerAction.jsp" method="post">
+  <form action="${pageContext.request.contextPath}/auth/register" method="post">
     <label for="first_name">First Name:</label>
     <input id="first_name" type="text" name="first_name" required>
     <br><br>
