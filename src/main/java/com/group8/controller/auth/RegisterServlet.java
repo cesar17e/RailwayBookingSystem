@@ -13,8 +13,28 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * Servlet: RegisterServlet
+ * URL: /auth/register
+ *
+ * Purpose:
+ *  - Creates a new customer account in the Customer table.
+ *  - Validates required fields (username, password, name, etc.).
+ *  - Ensures the username is not already taken.
+ *  - After successful registration, redirects user to login.jsp.
+ *
+ * Notes:
+ *  - Only registers customers, not employees.
+ *  - Does NOT auto-login — user must manually log in afterwards.
+ *  - Basic validation only (email format, password strength not enforced).
+ */
+
 @WebServlet("/auth/register")
 public class RegisterServlet extends HttpServlet {
+    // Read registration fields from the form
+    // Check if username already exists
+    // Insert new customer record into DB
+    // Redirect to login page with success message
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

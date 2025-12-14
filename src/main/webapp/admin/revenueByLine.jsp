@@ -1,3 +1,15 @@
+<%-- 
+  Page: revenueByLine.jsp
+
+  Purpose:
+    - Displays reservation volume for each transit line.
+    - Used to evaluate which lines generate the most activity.
+
+  Notes:
+    - Aggregates data by transit line.
+    - Admin-only analytics.
+--%>
+
 <%@ page import="java.sql.*" %>
 <%@ page import="com.group8.util.DBUtil" %>
 <%@ page contentType="text/html; charset=UTF-8" %>

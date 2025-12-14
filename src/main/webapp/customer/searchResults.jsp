@@ -1,3 +1,15 @@
+<%-- 
+  Page: searchResults.jsp
+
+  Purpose:
+    - Displays the search results of available train schedules based on the customer's query (origin, destination, and date).
+    - Allows the customer to view detailed schedule info and proceed to book a reservation.
+
+  Notes:
+    - Displays train schedule information such as departure/arrival times, fare, and available options.
+    - Links to reserve.jsp for booking a selected schedule.
+--%>
+
 <%@ page import="java.sql.*" %>
 <%@ page import="com.group8.util.DBUtil" %>
 <%@ page contentType="text/html; charset=UTF-8" %>

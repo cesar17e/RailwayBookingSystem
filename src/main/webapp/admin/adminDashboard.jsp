@@ -1,3 +1,16 @@
+<%-- 
+  Page: adminDashboard.jsp
+
+  Purpose:
+    - Main landing page for system administrators.
+    - Provides navigation to rep management, revenue reports, sales analytics,
+      and other administrative tools.
+
+  Notes:
+    - Visible only to logged-in admin users.
+    - No database queries here — this page simply links to other admin views.
+--%>
+
 <%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html>

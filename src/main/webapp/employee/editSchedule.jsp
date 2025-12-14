@@ -1,3 +1,15 @@
+<%-- 
+  Page: editSchedule.jsp
+
+  Purpose:
+    - Provides a form to edit an existing train schedule (departure/arrival times).
+    - Pre-fills the form with existing schedule information.
+
+  Notes:
+    - The form submits updates to editScheduleAction.jsp for processing.
+    - Only accessible to employees (admin/rep).
+--%>
+
 <%@ page import="java.sql.*" %>
 <%@ page import="com.group8.util.DBUtil" %>
 <%@ page contentType="text/html; charset=UTF-8" %>

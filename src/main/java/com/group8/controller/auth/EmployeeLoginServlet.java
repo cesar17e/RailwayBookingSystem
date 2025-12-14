@@ -15,8 +15,31 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Servlet: EmployeeLoginServlet
+ * URL: /auth/employee-login
+ *
+ * Purpose:
+ *  - Handles authentication for employees and admins.
+ *  - Distinguishes between employee types using the "role" parameter.
+ *     - role="rep" loads CustomerRep table
+ *     - role="admin" loads Manager/Admin table
+ *  - Creates session attributes: userId / userName / userSSN / role.
+ *  - Routes employee reps to repDashboard.jsp
+ *  - Routes admins to adminDashboard.jsp
+ *
+ * Notes:
+ *  - This login flow is separate from customer login.
+ *  - Protects all employee/admin areas by checking session role.
+ */
+
 @WebServlet("/auth/employee-login")
 public class EmployeeLoginServlet extends HttpServlet {
+
+    // Determine which type of employee is logging in (rep/admin)
+    // Query correct table to verify credentials
+    // On success → set session attributes and redirect to dashboard
+    // On failure → redirect back to employeeLogin.jsp
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

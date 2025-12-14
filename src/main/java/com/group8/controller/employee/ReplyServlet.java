@@ -1,3 +1,29 @@
+package com.group8.controller.employee;
+
+import com.group8.util.DBUtil;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.*;
+import jakarta.servlet.ServletException;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+/**
+ * Servlet: ReplyServlet
+ * URL: /employee/reply
+ *
+ * Purpose:
+ *  - Allows a rep to respond to customer support messages.
+ *  - Stores the reply text and records which rep (by SSN) answered.
+ *
+ * Notes:
+ *  - doGet(): displays reply.jsp form.
+ *  - doPost(): updates Message table with reply_text + rep SSN.
+ *  - A rep can only reply once — after that, repMessages.jsp marks it as answered.
+ */
+
 @WebServlet("/employee/reply")
 public class ReplyServlet extends HttpServlet {
 

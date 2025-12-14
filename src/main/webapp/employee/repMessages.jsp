@@ -1,3 +1,15 @@
+<%-- 
+  Page: repMessages.jsp
+
+  Purpose:
+    - Displays a list of messages from customers that customer service reps can respond to.
+    - Allows reps to view customer questions and either respond or mark them as answered.
+
+  Notes:
+    - Each message links to the reply.jsp for responding.
+    - Displays question and reply status for each message.
+--%>
+
 <%@ page import="java.sql.*" %>
 <%@ page import="com.group8.util.DBUtil" %>
 <%@ page contentType="text/html; charset=UTF-8" %>

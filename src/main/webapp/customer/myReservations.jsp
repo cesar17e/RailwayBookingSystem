@@ -1,3 +1,16 @@
+<%-- 
+  Page: myReservations.jsp
+
+  Purpose:
+    - Displays a list of the customer's existing reservations.
+    - Allows customers to view and manage their reservations, including canceling.
+
+  Notes:
+    - Includes the ability to cancel active reservations.
+    - Shows detailed reservation info such as dates, status, and total fare.
+--%>
+
+
 <%@ page import="java.sql.*" %>
 <%@ page import="com.group8.util.DBUtil" %>
 <%@ page contentType="text/html; charset=UTF-8" %>

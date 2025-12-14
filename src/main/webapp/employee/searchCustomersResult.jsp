@@ -1,3 +1,15 @@
+<%-- 
+  Page: searchCustomersResult.jsp
+
+  Purpose:
+    - Displays the results of a customer search based on transit line and date.
+    - Shows customer information (name, email) for reservations matching the criteria.
+
+  Notes:
+    - Only accessible by employees (admin/rep).
+    - Displays customers' details for specific transit line reservations.
+--%>
+
 <%@ page import="java.sql.*" %>
 <%@ page import="com.group8.util.DBUtil" %>
 <%@ page contentType="text/html; charset=UTF-8" %>

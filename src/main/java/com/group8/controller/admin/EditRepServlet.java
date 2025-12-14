@@ -15,6 +15,20 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Servlet: EditRepServlet
+ * URL: /admin/edit-rep
+ * Role Required: admin
+ *
+ * Purpose:
+ *  - doGet: Load rep info and forward to editRep.jsp.
+ *  - doPost: Accept updated info and update the CustomerRep record.
+ *
+ * Notes:
+ *  - Uses request attributes to pass DB data into editRep.jsp.
+ *  - Redirects back to manageReps.jsp upon success or failure.
+ */
+
 @WebServlet("/admin/edit-rep")
 public class EditRepServlet extends HttpServlet {
 

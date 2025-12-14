@@ -1,3 +1,15 @@
+<%-- 
+  Page: repDashboard.jsp
+
+  Purpose:
+    - Displays the dashboard for customer service reps (employee role).
+    - Provides links to manage train schedules, respond to customer messages, and search for customers.
+
+  Notes:
+    - Only accessible to employees with the rep role.
+    - Serves as a central navigation page for all rep-related tasks.
+--%>
+
 <%@ page import="java.sql.*" %>
 <%
     // Check if rep is logged in

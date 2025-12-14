@@ -1,3 +1,15 @@
+<%-- 
+  Page: monthlySales.jsp
+
+  Purpose:
+    - Shows total revenue grouped by month.
+    - Used by admins to understand sales trends and seasonal activity.
+
+  Notes:
+    - Relies on SQL GROUP BY month.
+    - Data is display-only; no actions performed.
+--%>
+
 <%@ page import="java.sql.*" %>
 <%@ page import="com.group8.util.DBUtil" %>
 <%@ page contentType="text/html; charset=UTF-8" %>

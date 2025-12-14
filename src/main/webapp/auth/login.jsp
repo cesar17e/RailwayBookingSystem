@@ -1,3 +1,16 @@
+<%-- 
+  Page: login.jsp
+
+  Purpose:
+    - Main login page for users (admin and customer reps).
+    - Collects user credentials (username and password) and sends them for validation.
+
+  Notes:
+    - Redirects to either admin or customer dashboard upon successful login.
+    - Uses LoginServlet to authenticate users.
+    - Displays errors if authentication fails.
+--%>
+
 <%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">

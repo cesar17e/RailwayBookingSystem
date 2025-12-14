@@ -1,3 +1,15 @@
+<%-- 
+  Page: reservationsByLine.jsp
+
+  Purpose:
+    - Displays the number of reservations made for each transit line.
+    - Allows employees (admin/rep) to view the most popular lines.
+
+  Notes:
+    - Accessible to admin roles only.
+    - Shows total reservations for each transit line, sorted by volume.
+--%>
+
 <%@ page import="java.sql.*" %>
 <%@ page import="com.group8.util.DBUtil" %>
 <%@ page contentType="text/html; charset=UTF-8" %>

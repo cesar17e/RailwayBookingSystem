@@ -10,6 +10,23 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * Servlet: ReserveServlet
+ * URL: /customer/reserve
+ *
+ * Purpose:
+ *  - Processes a customer's booking after they confirm trip details.
+ *  - Reads schedule_id, fare, passenger type, and trip type from the form.
+ *  - Computes the final fare (round-trip costs ×2).
+ *  - Inserts a new row into Reservation with status='active'.
+ *  - Redirects to My Reservations after successful booking.
+ *
+ * Notes:
+ *  - Customer must be logged in (uses session userId).
+ *  - Assumes input was validated on reserve.jsp.
+ *  - Does not handle seat availability (not required for project).
+ */
+
 @WebServlet("/customer/reserve")
 public class ReserveServlet extends HttpServlet {
 

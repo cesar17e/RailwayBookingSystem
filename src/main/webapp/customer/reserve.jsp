@@ -1,3 +1,16 @@
+<%-- 
+  Page: reserve.jsp
+
+  Purpose:
+    - Provides a form for customers to confirm their reservation details before booking.
+    - Includes options for selecting trip type and passenger type.
+
+  Notes:
+    - Fetches schedule details for a particular trip.
+    - Calculates total fare based on selected options.
+    - Submits the reservation to reserveAction.jsp.
+--%>
+
 <%@ page import="java.sql.*" %>
 <%@ page import="com.group8.util.DBUtil" %>
 <%@ page contentType="text/html; charset=UTF-8" %>

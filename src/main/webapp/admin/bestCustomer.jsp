@@ -1,3 +1,15 @@
+<%-- 
+  Page: bestCustomer.jsp
+
+  Purpose:
+    - Displays the customer with the highest total spending.
+    - Helps admins analyze customer value and sales performance.
+
+  Notes:
+    - Runs an aggregate SQL query (SUM of total_fare).
+    - Read-only analytics page.
+--%>
+
 <%@ page import="java.sql.*" %>
 <%@ page import="com.group8.util.DBUtil" %>
 <%@ page contentType="text/html; charset=UTF-8" %>

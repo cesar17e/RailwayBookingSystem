@@ -14,6 +14,20 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * Servlet: DeleteRepServlet
+ * URL: /admin/delete-rep
+ * Role Required: admin
+ *
+ * Purpose:
+ *  - Removes a CustomerRep from the system using their SSN.
+ *  - Triggered by a GET request from manageReps.jsp.
+ *
+ * Notes:
+ *  - Only admins may perform deletion.
+ *  - Redirects back to manageReps.jsp with a success/error message.
+ */
+
 @WebServlet("/admin/delete-rep")
 public class DeleteRepServlet extends HttpServlet {
 

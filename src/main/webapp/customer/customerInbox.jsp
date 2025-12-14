@@ -1,3 +1,15 @@
+<%-- 
+  Page: customerInbox.jsp
+
+  Purpose:
+    - Displays the customer's message inbox.
+    - Allows customers to view responses to their questions from customer service.
+
+  Notes:
+    - Displays a list of messages and their statuses.
+    - If a reply is available, it shows the response; otherwise, indicates that the message is still awaiting a reply.
+--%>
+
 <%@ page import="java.sql.*" %>
 <%@ page import="com.group8.util.DBUtil" %>
 <%@ page contentType="text/html; charset=UTF-8" %>

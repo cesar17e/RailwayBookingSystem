@@ -1,3 +1,15 @@
+<%-- 
+  Page: revenueByCustomer.jsp
+
+  Purpose:
+    - Lists customers with their total reservation count and total spending.
+    - Helps admins analyze user activity and revenue distribution.
+
+  Notes:
+    - Performs aggregate SQL queries (COUNT, SUM).
+    - Read-only report page.
+--%>
+
 <%@ page import="java.sql.*" %>
 <%@ page import="com.group8.util.DBUtil" %>
 <%@ page contentType="text/html; charset=UTF-8" %>

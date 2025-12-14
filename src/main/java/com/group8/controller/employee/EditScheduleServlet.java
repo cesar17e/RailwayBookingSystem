@@ -1,3 +1,30 @@
+package com.group8.controller.employee;
+
+import com.group8.util.DBUtil;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.*;
+import jakarta.servlet.ServletException;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+/**
+ * Servlet: EditScheduleServlet
+ * URL: /employee/edit-schedule
+ *
+ * Purpose:
+ *  - Enables a rep to update an existing train schedule.
+ *  - doGet(): Loads current schedule info and forwards to editSchedule.jsp.
+ *  - doPost(): Applies updated departure/arrival datetime fields.
+ *
+ * Notes:
+ *  - Performs role verification (rep only).
+ *  - Replaces "T" from datetime-local format before saving.
+ *  - Redirects back to manageSchedules.jsp after update.
+ */
+
 @WebServlet("/employee/edit-schedule")
 public class EditScheduleServlet extends HttpServlet {
 

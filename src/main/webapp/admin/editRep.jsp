@@ -1,3 +1,16 @@
+<%-- 
+  Page: editRep.jsp
+
+  Purpose:
+    - Displays a pre-filled form allowing the admin to update
+      a customer representative’s details.
+    - Data is provided by EditRepServlet (doGet).
+
+  Notes:
+    - Submits changes back to EditRepServlet (doPost) for database update.
+    - Restricted to admin users only.
+--%>
+
 <%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html>

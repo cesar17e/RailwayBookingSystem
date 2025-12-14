@@ -5,7 +5,7 @@
 
 -------------------Description-----------------
 
-The Railway Booking System is a web based application built using HTML, JSP, JDBC, and MySQL. It is designed to manage train reservations, schedules, and customer interactions efficiently.
+The Railway Booking System is a web based application built using HTML, JSP, JDBC, MySQL and Servlet. It is designed to manage train reservations, schedules, and customer interactions efficiently.
 The system provides separate dashboards and role-specific features for:
 Customers - Register, log in, search for train schedules, book tickets, view/cancel reservations, and communicate with customer support.
 Customer Representatives – Manage train schedules, respond to customer inquiries, and search for customers by line and reservation date.

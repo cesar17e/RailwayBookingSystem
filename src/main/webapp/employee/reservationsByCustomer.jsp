@@ -1,3 +1,15 @@
+<%-- 
+  Page: reservationsByCustomer.jsp
+
+  Purpose:
+    - Allows employees (admin/rep) to view reservations by specific customers.
+    - Displays total reservations and revenue by customer.
+
+  Notes:
+    - Accessible only to admin roles.
+    - Provides detailed customer reservation information.
+--%>
+
 <%@ page import="java.sql.*" %>
 <%@ page import="com.group8.util.DBUtil" %>
 <%@ page contentType="text/html; charset=UTF-8" %>

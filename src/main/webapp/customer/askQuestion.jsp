@@ -1,3 +1,15 @@
+<%-- 
+  Page: askQuestion.jsp
+
+  Purpose:
+    - Provides a form for customers to submit their questions or inquiries to customer service.
+    - The form is submitted to the askQuestionAction.jsp page for processing.
+
+  Notes:
+    - Includes a textarea for customers to write their query.
+    - Validates that the content is not empty before submission.
+--%>
+
 <%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html>

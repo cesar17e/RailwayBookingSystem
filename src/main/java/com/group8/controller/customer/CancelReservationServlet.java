@@ -10,6 +10,21 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * Servlet: CancelReservationServlet
+ * URL: /customer/cancel-reservation
+ *
+ * Purpose:
+ *  - Allows a logged-in customer to cancel their reservation.
+ *  - Updates the reservation row → sets status = 'cancelled'.
+ *  - Prevents customers from cancelling someone else's reservation
+ *    by verifying customer_id in the WHERE clause.
+ *
+ * Notes:
+ *  - Only affects "active" reservations (JSP handles the link visibility).
+ *  - After cancellation, user is redirected back to My Reservations.
+ */
+
 @WebServlet("/customer/cancel-reservation")
 public class CancelReservationServlet extends HttpServlet {
 

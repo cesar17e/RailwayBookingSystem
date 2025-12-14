@@ -1,3 +1,15 @@
+<%-- 
+  Page: topTransitLines.jsp
+
+  Purpose:
+    - Shows the most frequently used transit lines based on reservation count.
+    - Useful for capacity planning and system performance evaluation.
+
+  Notes:
+    - Runs a GROUP BY transit_line_name sorted descending.
+    - Analytics-only page for admins.
+--%>
+
 <%@ page import="java.sql.*" %>
 <%@ page import="com.group8.util.DBUtil" %>
 <%@ page contentType="text/html; charset=UTF-8" %>

@@ -1,3 +1,30 @@
+package com.group8.controller.employee;
+
+import com.group8.util.DBUtil;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.*;
+import jakarta.servlet.ServletException;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+/**
+ * Servlet: DeleteScheduleServlet
+ * URL: /employee/delete-schedule
+ *
+ * Purpose:
+ *  - Deletes a schedule record from the TrainSchedule table.
+ *  - Ensures that only reps can delete schedules.
+ *  - Uses a simple GET request triggered by a "Delete" link.
+ *
+ * Notes:
+ *  - The JSP uses a JavaScript confirm(), but deletion still occurs here.
+ *  - If the schedule does not exist, nothing breaks — deletion simply returns 0 rows.
+ *  - Redirects to manageSchedules.jsp upon completion.
+ */
+
 @WebServlet("/employee/delete-schedule")
 public class DeleteScheduleServlet extends HttpServlet {
 

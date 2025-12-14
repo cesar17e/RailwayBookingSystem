@@ -1,3 +1,14 @@
+<%-- 
+  Page: search.jsp
+
+  Purpose:
+    - Provides a form for customers to search for available train schedules based on origin, destination, and travel date.
+
+  Notes:
+    - Users select the origin and destination stations and input a travel date.
+    - The form submits the request to searchResults.jsp for displaying available schedules.
+--%>
+
 <%@ page import="java.sql.Connection, java.sql.PreparedStatement, java.sql.ResultSet, java.sql.SQLException" %>
 <%@ page import="com.group8.util.DBUtil" %>
 <%@ page contentType="text/html; charset=UTF-8" %>

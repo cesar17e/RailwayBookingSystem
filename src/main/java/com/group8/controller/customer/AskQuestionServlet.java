@@ -10,6 +10,21 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * Servlet: AskQuestionServlet
+ * URL: /customer/ask-question
+ *
+ * Purpose:
+ *  - Allows a logged-in customer to submit a support question.
+ *  - Inserts a new row into the Message table with:
+ *        content, customer_id, reply_text (null), customer_rep_ssn (null)
+ *  - Redirects back to customer dashboard after successful submission.
+ *
+ * Notes:
+ *  - Customer must be logged in (userId is checked in the session).
+ *  - No rep is assigned yet — reps see all unanswered messages.
+ */
+
 @WebServlet("/customer/ask-question")
 public class AskQuestionServlet extends HttpServlet {
 

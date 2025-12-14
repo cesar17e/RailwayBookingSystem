@@ -1,3 +1,16 @@
+<%-- 
+  Page: manageReps.jsp
+
+  Purpose:
+    - Displays all customer representatives in the system.
+    - Allows the admin to add, edit, or delete reps.
+    - Interacts with AddRepServlet, EditRepServlet, and DeleteRepServlet.
+
+  Notes:
+    - Restricted to admin role.
+    - Shows success/error messages by reading query parameters.
+--%>
+
 <%@ page import="java.sql.*" %>
 <%@ page import="com.group8.util.DBUtil" %>
 <%@ page contentType="text/html; charset=UTF-8" %>

@@ -1,3 +1,15 @@
+<%-- 
+  Page: viewStops.jsp
+
+  Purpose:
+    - Displays a list of stops for a particular train schedule.
+    - Shows information about each stop, including station names and arrival/departure times.
+
+  Notes:
+    - Helpful for customers who want to know the full route of their selected train.
+    - Is accessed after choosing a train schedule in the searchResults.jsp page.
+--%>
+
 <%@ page import="java.sql.*" %>
 <%@ page import="com.group8.util.DBUtil" %>
 <%@ page contentType="text/html; charset=UTF-8" %>

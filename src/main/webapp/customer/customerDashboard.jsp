@@ -1,3 +1,15 @@
+<%-- 
+  Page: customerDashboard.jsp
+
+  Purpose:
+    - Displays the customer dashboard with various options for managing reservations, viewing messages, and asking questions.
+    - Provides navigation to other customer-specific pages (e.g., My Reservations, Search, Ask Customer Service).
+
+  Notes:
+    - Accessible once the customer is logged in.
+    - Links to sections where the customer can interact with the system (reserve, view messages, etc.).
+--%>
+
 <%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html>

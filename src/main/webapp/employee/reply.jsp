@@ -1,3 +1,15 @@
+<%-- 
+  Page: reply.jsp
+
+  Purpose:
+    - Provides a form for customer service reps to reply to customer inquiries.
+    - Displays a message thread and allows the rep to write a response.
+
+  Notes:
+    - Submits the response to the server for saving in the database.
+    - Only accessible by reps to handle customer messages.
+--%>
+
 <%@ page contentType="text/html; charset=UTF-8" %>
 
 <%

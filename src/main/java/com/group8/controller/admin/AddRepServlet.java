@@ -14,6 +14,22 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * Servlet: AddRepServlet
+ * URL: /admin/add-rep
+ * Role Required: admin
+ *
+ * Purpose:
+ *  - Handles creation of new Customer Representatives.
+ *  - Validates required fields from the form.
+ *  - Inserts the new representative into the CustomerRep table.
+ *  - Redirects back to manageReps.jsp with success or error messages.
+ *
+ * Notes:
+ *  - Admin session role check is enforced before processing.
+ *  - Manager SSN is taken from the admin’s session and stored with the new rep.
+ */
+
 @WebServlet("/admin/add-rep")
 public class AddRepServlet extends HttpServlet {
 

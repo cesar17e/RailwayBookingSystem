@@ -1,3 +1,15 @@
+<%-- 
+  Page: manageSchedules.jsp
+
+  Purpose:
+    - Displays a list of all train schedules for employees to manage.
+    - Allows employees to edit or delete existing schedules.
+
+  Notes:
+    - The table includes options to edit or delete each schedule.
+    - The add new schedule button links to addSchedule.jsp for creating new entries.
+--%>
+
 <%@ page import="java.sql.*" %>
 <%@ page import="com.group8.util.DBUtil" %>
 <%@ page contentType="text/html; charset=UTF-8" %>

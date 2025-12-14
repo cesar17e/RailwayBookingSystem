@@ -1,3 +1,15 @@
+<%-- 
+  Page: addSchedule.jsp
+
+  Purpose:
+    - Provides a form for employees (admin/rep) to add a new train schedule to the system.
+    - Allows selection of the train and input of departure/arrival times.
+
+  Notes:
+    - The form submits the data to addScheduleAction.jsp for insertion into the database.
+    - Only accessible to employees with admin/rep roles.
+--%>
+
 <%@ page import="java.sql.*" %>
 <%@ page import="com.group8.util.DBUtil" %>
 <%

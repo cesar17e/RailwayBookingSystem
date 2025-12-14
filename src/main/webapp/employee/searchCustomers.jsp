@@ -1,3 +1,14 @@
+<%-- 
+  Page: searchCustomers.jsp
+
+  Purpose:
+    - Provides a search interface for employees (admin/rep) to look up customers by transit line and date.
+    - Allows employees to find specific customer reservations.
+
+  Notes:
+    - Submits data to searchCustomersResult.jsp for displaying search results.
+--%>
+
 <%@ page import="java.sql.*" %>
 <%@ page import="com.group8.util.DBUtil" %>
 <%@ page contentType="text/html; charset=UTF-8" %>

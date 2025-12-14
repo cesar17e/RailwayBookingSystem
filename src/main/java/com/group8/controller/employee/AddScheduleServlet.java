@@ -10,6 +10,25 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+
+/**
+ * Servlet: AddScheduleServlet
+ * URL: /employee/add-schedule
+ *
+ * Purpose:
+ *  - Allows a customer representative (role = "rep") to create a new
+ *    train schedule entry.
+ *  - Takes: train_id, departure_datetime, arrival_datetime.
+ *  - Inserts a new row into TrainSchedule.
+ *
+ * Notes:
+ *  - Only reps are allowed (session role check).
+ *  - Datetime-local input from JSP comes in "yyyy-MM-ddTHH:mm", so
+ *    the servlet converts "T" → " " for SQL compatibility.
+ *  - On success, redirects to manageSchedules.jsp.
+ */
+
+
 @WebServlet("/employee/add-schedule")
 public class AddScheduleServlet extends HttpServlet {
 

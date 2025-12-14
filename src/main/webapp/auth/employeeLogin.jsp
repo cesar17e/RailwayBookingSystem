@@ -1,3 +1,16 @@
+<%-- 
+  Page: employeeLogin.jsp
+
+  Purpose:
+    - Provides the login form for employee users (admin/rep).
+    - Allows users to authenticate using their credentials (username, password).
+
+  Notes:
+    - On successful login, redirects to the appropriate dashboard (admin/rep).
+    - On failed login, displays an error message and prompts for retry.
+    - Works in conjunction with LoginServlet for authentication.
+--%>
+
 <%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">

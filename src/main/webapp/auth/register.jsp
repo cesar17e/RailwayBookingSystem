@@ -1,3 +1,15 @@
+<%-- 
+  Page: register.jsp
+
+  Purpose:
+    - Provides a registration form for new users (admin, customer rep).
+    - Allows creation of new employee accounts (admin/rep roles).
+
+  Notes:
+    - Data collected here is submitted to RegisterServlet for account creation.
+    - Input validation to prevent missing or incorrect data.
+--%>
+
 <%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">

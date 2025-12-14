@@ -15,8 +15,29 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+
+/**
+ * Servlet: LoginServlet
+ * URL: /auth/login
+ *
+ * Purpose:
+ *  - Handles login for customers (NOT employees).
+ *  - Validates username/password against the Customer table.
+ *  - Creates a session storing userId + userName + role="customer".
+ *  - Redirects the user to customerDashboard.jsp on success.
+ *
+ * Notes:
+ *  - Employees use EmployeeLoginServlet instead.
+ *  - If login fails, redirects back to login.jsp with an error message.
+ */
+
 @WebServlet("/auth/login")
 public class LoginServlet extends HttpServlet {
+
+    // Retrieve form fields from login.jsp
+    // Query the DB for matching username/password
+    // If credentials match --> create session + redirect
+    // If not --> return to login.jsp with an error
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
