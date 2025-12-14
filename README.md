@@ -76,12 +76,12 @@ Creates all tables:
 - Reservation  
 - Message  
 - handles_reservation
-
+  
 ## Entity–Relationship Diagrams
 
 ### Team-Designed ERD
-![Team ERD](../src/main/webapp/images/team-erd.png)
+![Team ERD](src/main/webapp/images/team-erd.png)
 
 ### MySQL-Generated ERD
-![MySQL ERD](../src/main/webapp/images/mysql-erd.png)
+![MySQL ERD](src/main/webapp/images/mysql-erd.png)
 
