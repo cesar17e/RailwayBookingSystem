@@ -1,0 +1,49 @@
+<%@ page import="java.sql.*" %>
+<%@ page import="com.group8.util.DBUtil" %>
+<%
+    // Connect to the database to populate train options
+    ResultSet rs = null;
+    try (
+        Connection con = DBUtil.getConnection();
+        Statement stmt = con.createStatement()
+    ) {
+        rs = stmt.executeQuery(
+            "SELECT t.train_id, tl.transit_line_name " +
+            "FROM Train t JOIN TransitLine tl ON t.transit_line_id = tl.transit_line_id");
+%>
+
+<h2>Add New Train Schedule</h2>
+
+<form action="addScheduleAction.jsp" method="post">
+    <label for="train_id">Select Train (Line):</label>
+    <select name="train_id" required>
+        <option value="">-- Choose a train --</option>
+        <%
+            while (rs.next()) {
+        %>
+            <option value="<%= rs.getInt("train_id") %>">
+                Train <%= rs.getInt("train_id") %> - <%= rs.getString("transit_line_name") %>
+            </option>
+        <%
+            }
+        %>
+    </select>
+    <br><br>
+
+    <label for="departure_datetime">Departure Date & Time:</label>
+    <input type="datetime-local" name="departure_datetime" required />
+    <br><br>
+
+    <label for="arrival_datetime">Arrival Date & Time:</label>
+    <input type="datetime-local" name="arrival_datetime" required />
+    <br><br>
+
+    <input type="submit" value="Add Schedule" />
+    <a href="manageSchedules.jsp">Cancel</a>
+</form>
+
+<%
+    } catch (SQLException e) {
+        out.println("<p style='color:red;'>Database Error: " + e.getMessage() + "</p>");
+    }
+%>
