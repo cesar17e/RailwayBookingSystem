@@ -80,8 +80,9 @@ Creates all tables:
 ## Entity–Relationship Diagrams
 
 ### Team-Designed ERD
-![Team ERD](src/main/webapp/images/team-erd.png)
+<img src="src/main/webapp/images/team-erd.png" width="450">
 
 ### MySQL-Generated ERD
-![MySQL ERD](src/main/webapp/images/mysql-erd.png)
+<img src="src/main/webapp/images/mysql-erd.png" width="450">
+
 
