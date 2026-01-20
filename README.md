@@ -11,8 +11,7 @@ The system supports account management, trip searching, reservations, customer s
 ## Demo Video
 A full walkthrough demonstrating login, searching, reserving, schedule management, admin dashboards, and customer messaging is included with the project.
 
-**Insert video link here:**  
-`[Video Link]`
+**Video link here:**  
 
 ---
 
