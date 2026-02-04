@@ -13,6 +13,8 @@ A full walkthrough demonstrating login, searching, reserving, schedule managemen
 
 **Video link here:**  
 
+https://drive.google.com/file/d/1-Xjs1d68ZIaZf8NaTUvBoCbE7ikO_z9O/view?usp=sharing
+
 ---
 
 ## Features Overview
