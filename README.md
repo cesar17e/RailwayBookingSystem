@@ -86,4 +86,16 @@ Creates all tables:
 ### MySQL-Generated ERD
 <img src="src/main/webapp/images/mysql-erd.png" width="450">
 
+## Modernization Status
+
+The legacy servlet/JSP/MySQL implementation remains available as the original
+school project. The Spring Boot rewrite starts with a PostgreSQL data model in
+[`docs/phase-0-data-model.md`](docs/phase-0-data-model.md) and versioned Flyway
+migrations under `backend/src/main/resources/db/migration`.
+
+Phase 0 intentionally corrects schema issues discovered in the legacy dump,
+including missing message/customer fields, non-generated write IDs, floating
+point money values, plaintext credentials, and the unusable global stop-order
+primary key. The executable migrations, not the old dump, are the source of
+truth for the new application.
 
